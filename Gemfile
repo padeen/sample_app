@@ -5,15 +5,21 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
-# Use sqlite3 as the database for Active Record
+#Use postgresql as the database for Active Record
+gem 'pg', '0.17.0'
+
 group :development do
-  gem 'sqlite3'
   gem 'rspec-rails', '2.14.0'
+  gem 'guard-rspec', '4.0.4'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.1'
+  gem 'childprocess', '0.3.9'
 end
 
 group :test do
   gem 'selenium-webdriver', '2.37.0'
   gem 'capybara', '2.1.0'
+  gem 'libnotify', '0.8.2'
 end
 
 # Use SCSS for stylesheets
@@ -43,7 +49,6 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.17.0'
   gem 'rails_12factor', '0.0.2'
 end
 
